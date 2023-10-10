@@ -1,37 +1,41 @@
-# texsupport.ims_cosponsored-ss
+# SS
 
-## About
+## DESCRIPTION
 
 LaTeX author support files for IMS co-sponsored journal: 
 [Statistics Surveys (SS)](https://imstat.org/journals-and-publications/statistics-surveys/)
 
-## Contents
+## FILE LIST
 
-The following files are given in the repository (or directly in `.zip` archive):
+-   `ss-sample.tex` - sample article for SS (source file)
+-   `ss-sample.pdf` - sample article for SS (PDF compiled)
+-   `figure1.eps`, `figure1.pdf` - sample figures for `ss-sample.pdf`
+-   `LICENSE` - a copy of the LaTeX Project Public License
+-   `README.md` - this file itself!
+-   `imsart.cls`, `imsart.sty` - LaTeX style files
+-   `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` - BibTeX style files
 
--   `imsart.cls`, `imsart.sty` - LaTeX style files designed for *IMS* co-sponsored journals articles. 
-    Please do not change them. These files are already loaded in the respective template files; 
--   `ss-template.tex` - the main template file should be used for article preparation;
--   `ss-sample.pdf` - instructions for the preparation of a
-    camera-ready paper in LaTeX. This document contains useful information regarding the structure 
-    of your document, proper tagging style, layout features, etc;
--   `figure1.eps`, `figure1.pdf` - sample figures for `ss-sample.pdf`;
--   `ss-sample.tex` - source file for the instructions paper `ss-sample.pdf`;
--   `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` - BibTeX styles to prepare bibliography file.
+## INSTRUCTIONS FOR SS AUTHORS
+
+-   You only need `imsart.cls`, `imsart.sty`, `ss-sample.tex`, and `ss-sample.pdf`
+-   Take the time to read `ss-sample.pdf`
+-   Copy `ss-sample.tex` into `yourname.tex`
+-   Edit `yourname.tex` (update metadata and the content of the paper)
+-   Use `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` BibTeX styles to prepare bibliography file. 
     More information can be found [here](http://www.bibtex.org/Using/) 
     or [here](https://www.latex-tutorial.com/tutorials/bibtex/).
+-   Be sure to have `imsart.cls`, `imsart.sty` in the same directory (or any dir scanned for `cls`)
+-   Compile `yourname.tex` to generate `yourname.pdf` with a `pdflatex` or `lualatex` program and check the result
+-   More detailed instructions for authors are available on Internet: https://imstat.org/journals-and-publications/statistics-surveys/
 
-## Setup
+## TROUBLESHOOTING
 
--   Clone the repository or download the `.zip` archive;
--   Install LaTeX style files (`imsart.cls`, `imsart.sty`) in your TeX system or 
-    place them in the same directory where your `*.tex` file is;
--   Read the instructions (`ss-sample.pdf`) for the preparation of your LaTeX document;
--   Use the template file `ss-template.tex` to prepare your manuscript.
+-   To remove frame from the text box use document class option `noshowframe`, e.g:
 
-## Bug reports
+        \documentclass[ss,noshowframe]{imsart}
+
+## BUG REPORTS
 
 Please submit bug reports and/or feature requests
 at [GitHub page](https://github.com/vtex-soft/texsupport.ims_cosponsored-ss/issues) or 
 [latex-support@vtex.lt](mailto:latex-support@vtex.lt).
-
